@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-attachment: fixed;
+}
+.img-container{
+  background-image: url(https://www.michaelpage.com.au/sites/michaelpage.com.au/files/2024-08/finding-a-job-that-makes-you-happy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  position: relative;
+}
+.content-container{
+  height: 200px;
+  width: 500px;
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  margin-top: 180px;
+  margin-left: 530px;
+  }
+  .content-container button{
+    border-radius: 10px;
+   background-color: blue;
+    padding: 5px;
+    color: white;
+   
+    
+  }
+  .content-container a{
+    text-decoration: none;
+    color: white;
+  }
+  .tools img{
+    height: 500px;
+    margin-bottom: 20px;
+  }
+  .img{
+    background-image: url(https://media.istockphoto.com/id/1453843862/photo/business-meeting.jpg?s=612x612&w=0&k=20&c=4k9H7agmpn92B7bkUywvkK5Ckwm9Y8f8QrGs4DRDWpE=);
+     background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+
+  }
+.img-col{
+  height: 30px;
+}
+
+.container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .text-content {
+      width: 45%;
+    }
+
+    .text-content h2 {
+      
+      margin-bottom: 15px;
+    }
+
+    
+
+    .testimonials {
+      width: 50%;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      
+    }
+
+    .testimonial-grid img {
+      
+      height: 80px;
+     
+    }
+   .footer{
+    background-color: black;
+    color: white;
+   }
+   
