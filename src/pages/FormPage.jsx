@@ -7,11 +7,11 @@ const FormPage = () => {
   return (
     <>
     <div className="row m-5">
-      <div className="col">
+      <div className="col-lg-6">
         <StepperCompound/>
 
       </div>
-      <div className="col">
+      <div className="col-lg-6">
         <Preview/>
 
       </div>

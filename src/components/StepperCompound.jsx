@@ -6,6 +6,9 @@ import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+
+
 
 const StepperCompound = () => {
   const steps = [
@@ -42,20 +45,7 @@ const StepperCompound = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleSkip = () => {
-    if (!isStepOptional(activeStep)) {
-      // You probably want to guard against something like this,
-      // it should never occur unless someone's actively trying to break something.
-      throw new Error("You can't skip a step that isn't optional.");
-    }
 
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped((prevSkipped) => {
-      const newSkipped = new Set(prevSkipped.values());
-      newSkipped.add(activeStep);
-      return newSkipped;
-    });
-  };
 
   const handleReset = () => {
     setActiveStep(0);
@@ -114,14 +104,20 @@ const StepperCompound = () => {
             <>
             <h3>Skills</h3>
 
-  <TextField  className="w-100" id="standard-basic" label="Add Skills" variant="standard" />
-   
-
-
+  <TextField  className="w-100 mb-3" id="standard-basic" label="Add Skills" variant="standard" />
+  <Button variant="text">Add</Button>
+  <h4>Suggestions :</h4>
+  <Stack direction={"row"} spacing={2} >
+    <Button variant="outlined">React</Button>
+    <Button variant="outlined">Node</Button>
+    <Button variant="outlined">Express</Button>
+    <Button variant="outlined">Angular</Button>
+    <Button variant="outlined">Mongo Db</Button>
+  </Stack>
             </>
         );
 
-case 6:
+case 5:
         return (
             <>
             <h3>Professional Summary</h3>
@@ -130,13 +126,9 @@ case 6:
           label="Write a short summary of yourself"
           multiline
           rows={4}
-        //   defaultValue="Default Value"
+          defaultValue="I am passionate full-stack developer with hands on experience in React,Node ..."
           variant="standard"
         />
-
-   
-
-
             </>
         );
 
@@ -155,9 +147,9 @@ case 6:
           //       <Typography variant="caption">Optional</Typography>
           //     );
           //   }
-          if (isStepSkipped(index)) {
-            stepProps.completed = false;
-          }
+          // if (isStepSkipped(index)) {
+          //   stepProps.completed = false;
+          // }
           return (
             <Step key={label} {...stepProps}>
               <StepLabel {...labelProps}>{label}</StepLabel>
@@ -189,11 +181,11 @@ case 6:
               Back
             </Button>
             <Box sx={{ flex: "1 1 auto" }} />
-            {isStepOptional(activeStep) && (
+            {/* {isStepOptional(activeStep) && (
               <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
                 Skip
               </Button>
-            )}
+            )} */}
             <Button onClick={handleNext}>
               {activeStep === steps.length - 1 ? "Finish" : "Next"}
             </Button>
